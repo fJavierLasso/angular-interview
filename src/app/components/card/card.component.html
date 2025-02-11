@@ -1,0 +1,15 @@
+<div
+  class="card"
+  [class.dark-theme]="isDarkTheme"
+  [class.only-id]="showOnlyId"
+  (mouseenter)="enableDarkTheme()"
+  (mouseleave)="disableDarkTheme()"
+  (click)="toggleVariant()"
+>
+  <h2 *ngIf="showOnlyId || !data.image || !data.title; else standardLayout" class="id">Id: {{ data.id }}</h2>
+
+  <ng-template #standardLayout>
+    <img *ngIf="data.image" [src]="data.image" alt="{{ data.title }}" class="image" />
+    <h2 class="title">{{ data.title }}</h2>
+  </ng-template>
+</div>
