@@ -5,11 +5,16 @@
   (mouseenter)="enableDarkTheme()"
   (mouseleave)="disableDarkTheme()"
   (click)="toggleVariant()"
+  tabindex="0" 
+  role="button"
+  [attr.aria-label]="'cardLabel' | translate: { id: data.id, title: data.title }"
 >
-  <h2 *ngIf="showOnlyId || !data.image || !data.title; else standardLayout" class="id">Id: {{ data.id }}</h2>
+  <h2 *ngIf="showOnlyId || !data.image || !data.title; else standardLayout" class="id">
+    {{ 'id' | translate }}: {{ data.id }}
+  </h2>
 
   <ng-template #standardLayout>
-    <img *ngIf="data.image" [src]="data.image" alt="{{ data.title }}" class="image" />
+    <img *ngIf="data.image" [src]="data.image" [alt]="'imageAlt' | translate: { title: data.title }" class="image" />
     <h2 class="title">{{ data.title }}</h2>
   </ng-template>
 </div>

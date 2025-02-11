@@ -1,0 +1,7 @@
+{
+    "loading": "Cargando...",
+    "errorMessage": "Error al cargar los datos. Inténtalo de nuevo.",
+    "id": "id",
+    "cardLabel": "Tarjeta con ID {{ id }} y título {{ title }}",
+    "imageAlt": "Imagen de {{ title }}"
+}

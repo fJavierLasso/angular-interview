@@ -11,3 +11,16 @@
   justify-content: center;
   gap: 2rem;
 }
+
+.loading, .error-message {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}

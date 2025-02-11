@@ -1,5 +1,8 @@
 <div class="grid-container">
-  <div class="grid">
+  <div class="loading" [hidden]="!isLoading">{{ 'loading' | translate }}</div>
+  <div class="error-message" [hidden]="!errorMessage">{{ 'errorMessage' | translate }}</div>
+
+  <div class="grid" [hidden]="isLoading || errorMessage">
     <app-card *ngFor="let item of data" [data]="item"></app-card>
   </div>
 </div>
